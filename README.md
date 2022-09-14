@@ -7,11 +7,10 @@ Hyperlink : https://catalogueeee.herokuapp.com/katalog/
 ## Create a diagram containing client request to the Django web application and its response. Also explain the flow of the diagram and how the urls.py, views.py, models.py and HTML files connected each other.
 
 urls.py --> views.py --> Response to User
-              / \
-             /   \
-            /     \
-           /       \
-     Models.py    HTML files
+             |     |
+             |     |
+             |     |
+     Models.py     HTML files    
 
 When the user makes a request, urls will then continues that request to the views.py and if the request requires some data from models.py, then views.py will make a query to models. After obtaining the data from models.py, views.py will then pass on the request to the HTML files where all of the template of the output will be handled. After getting the output from the HTML files, the output will then be displayed to the user.
 
