@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h5>Name: </h5>
+<p>{{name}}</p>
+
+<table>
+    <tr>
+    <th>Title</th>
+    <th>Watched</th>
+    <th>Rating</th>
+    <th>Release date</th>
+    <th>Review</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for item in list_item %}
+    <tr>
+        <th>{{item.title}}</th>
+        <th>{{item.watched}}</th>
+        <th>{{item.rating}}</th>
+        <th>{{item.release_date}}</th>
+        <th>{{item.review}}</th>
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock content %}
