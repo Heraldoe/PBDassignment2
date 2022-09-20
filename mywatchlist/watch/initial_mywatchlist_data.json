@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.ItemWatchlist",
+        "pk":1,
+        "fields":{
+            "watched": "iPhone 14 Pro Maag",
+            "title": "14000000",
+            "rating": "It gives you ulcers because it's expensive.",
+            "release_date": "uwawaw",
+            "review": "kekekekek"
+        }
+},
+{
+    "model": "mywatchlist.ItemWatchlist",
+    "pk":2,
+    "fields":{
+        "watched": "iPhone 14 Pro Maag",
+        "title": "14000000",
+        "rating": "It gives you ulcers because it's expensive.",
+        "release_date": "uwawaw",
+        "review": "kekekekek"
+    }
+},
+{
+    "model": "mywatchlist.ItemWatchlist",
+    "pk":3,
+    "fields":{
+        "watched": "iPhone 14 Pro Maag",
+        "title": "14000000",
+        "rating": "It gives you ulcers because it's expensive.",
+        "release_date": "uwawaw",
+        "review": "kekekekek"
+    }
+},
+{
+    "model": "mywatchlist.ItemWatchlist",
+    "pk":4,
+    "fields":{
+        "watched": "iPhone 14 Pro Maag",
+        "title": "14000000",
+        "rating": "It gives you ulcers because it's expensive.",
+        "release_date": "uwawaw",
+        "review": "kekekekek"
+    }
+},
+{
+    "model": "mywatchlist.ItemWatchlist",
+    "pk":5,
+    "fields":{
+        "watched": "iPhone 14 Pro Maag",
+        "title": "14000000",
+        "rating": "It gives you ulcers because it's expensive.",
+        "release_date": "uwawaw",
+        "review": "kekekekek"
+    }
+},
+{
+    "model": "mywatchlist.ItemWatchlist",
+    "pk":6,
+    "fields":{
+        "watched": "iPhone 14 Pro Maag",
+        "title": "14000000",
+        "rating": "It gives you ulcers because it's expensive.",
+        "release_date": "uwawaw",
+        "review": "kekekekek"
+    }
+},
+{
+"model": "mywatchlist.ItemWatchlist",
+"pk":7,
+"fields":{
+    "watched": "iPhone 14 Pro Maag",
+    "title": "14000000",
+    "rating": "It gives you ulcers because it's expensive.",
+    "release_date": "uwawaw",
+    "review": "kekekekek"
+}
+},
+{
+"model": "mywatchlist.ItemWatchlist",
+"pk":8,
+"fields":{
+    "watched": "iPhone 14 Pro Maag",
+    "title": "14000000",
+    "rating": "It gives you ulcers because it's expensive.",
+    "release_date": "uwawaw",
+    "review": "kekekekek"
+}
+},
+{
+"model": "mywatchlist.ItemWatchlist",
+"pk":9,
+"fields":{
+    "watched": "iPhone 14 Pro Maag",
+    "title": "14000000",
+    "rating": "It gives you ulcers because it's expensive.",
+    "release_date": "uwawaw",
+    "review": "kekekekek"
+}
+},
+{
+"model": "mywatchlist.ItemWatchlist",
+"pk":10,
+"fields":{
+    "watched": "iPhone 14 Pro Maag",
+    "title": "14000000",
+    "rating": "It gives you ulcers because it's expensive.",
+    "release_date": "uwawaw",
+    "review": "kekekekek"
+}
+}
+]
