@@ -3,21 +3,21 @@
         "model": "mywatchlist.ItemWatchlist",
         "pk":1,
         "fields":{
-            "watched": "iPhone 14 Pro Maag",
-            "title": "14000000",
-            "rating": "5",
-            "release_date": "uwawaw",
-            "review": "kekekekek"
+            "watched": "Yes",
+            "title": "Doctor Strange in the Multiverse of Madness",
+            "rating": "3",
+            "release_date": "May 5, 2022",
+            "review": "Not as good as the first one."
         }
 },
 {
     "model": "mywatchlist.ItemWatchlist",
     "pk":2,
     "fields":{
-        "watched": "iPhone 14 Pro Maag",
-        "title": "14000000",
-        "rating": "5",
-        "release_date": "uwawaw",
+        "watched": "Yes",
+        "title": "Pengabdi Setan 2: Communion",
+        "rating": "4",
+        "release_date": "August 4, 2022",
         "review": "kekekekek"
     }
 },
@@ -25,88 +25,88 @@
     "model": "mywatchlist.ItemWatchlist",
     "pk":3,
     "fields":{
-        "watched": "iPhone 14 Pro Maag",
-        "title": "14000000",
-        "rating": "5",
-        "release_date": "uwawaw",
-        "review": "kekekekek"
+        "watched": "No",
+        "title": "Thor: Love and Thunder",
+        "rating": "-",
+        "release_date": "July 6, 2022",
+        "review": "-"
     }
 },
 {
     "model": "mywatchlist.ItemWatchlist",
     "pk":4,
     "fields":{
-        "watched": "iPhone 14 Pro Maag",
-        "title": "14000000",
-        "rating": "5",
-        "release_date": "uwawaw",
-        "review": "kekekekek"
+        "watched": "Yes",
+        "title": "Weathering with You",
+        "rating": "3",
+        "release_date": "August 21, 2019",
+        "review": "Decent, but not as good as Your Name."
     }
 },
 {
     "model": "mywatchlist.ItemWatchlist",
     "pk":5,
     "fields":{
-        "watched": "iPhone 14 Pro Maag",
-        "title": "14000000",
-        "rating": "5",
-        "release_date": "uwawaw",
-        "review": "kekekekek"
+        "watched": "Yes",
+        "title": "Your Name.",
+        "rating": "4",
+        "release_date": "December 7, 2016",
+        "review": "A good movie with a nice twist."
     }
 },
 {
     "model": "mywatchlist.ItemWatchlist",
     "pk":6,
     "fields":{
-        "watched": "iPhone 14 Pro Maag",
-        "title": "14000000",
+        "watched": "Yes",
+        "title": "The Disappearance of Haruhi Suzumiya",
         "rating": "5",
-        "release_date": "uwawaw",
-        "review": "kekekekek"
+        "release_date": "February 6, 2010",
+        "review": "Amazing movie."
     }
 },
 {
 "model": "mywatchlist.ItemWatchlist",
 "pk":7,
 "fields":{
-    "watched": "iPhone 14 Pro Maag",
-    "title": "14000000",
-    "rating": "5",
-    "release_date": "uwawaw",
-    "review": "kekekekek"
+    "watched": "No",
+    "title": "Top Gun: Maverick",
+    "rating": "-",
+    "release_date": "May 27, 2022",
+    "review": "-"
 }
 },
 {
 "model": "mywatchlist.ItemWatchlist",
 "pk":8,
 "fields":{
-    "watched": "iPhone 14 Pro Maag",
-    "title": "14000000",
-    "rating": "5",
-    "release_date": "uwawaw",
-    "review": "kekekekek"
+    "watched": "Yes",
+    "title": "Minions: The Rise of Gru",
+    "rating": "4",
+    "release_date": "June 28, 2022",
+    "review": "It was Okay."
 }
 },
 {
 "model": "mywatchlist.ItemWatchlist",
 "pk":9,
 "fields":{
-    "watched": "iPhone 14 Pro Maag",
-    "title": "14000000",
-    "rating": "5",
-    "release_date": "uwawaw",
-    "review": "kekekekek"
+    "watched": "No",
+    "title": "Morbius",
+    "rating": "-",
+    "release_date": "March 30, 2022",
+    "review": "-"
 }
 },
 {
 "model": "mywatchlist.ItemWatchlist",
 "pk":10,
 "fields":{
-    "watched": "iPhone 14 Pro Maag",
-    "title": "14000000",
+    "watched": "Yes",
+    "title": "Spider-Man: No Way Home",
     "rating": "4",
-    "release_date": "uwawaw",
-    "review": "kekekekek"
+    "release_date": "December 15, 2021",
+    "review": "I enjoyed watching the movie."
 }
 }
 ]
