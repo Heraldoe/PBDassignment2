@@ -27,7 +27,7 @@
     "fields":{
         "watched": "No",
         "title": "Thor: Love and Thunder",
-        "rating": "-",
+        "rating": "--",
         "release_date": "July 6, 2022",
         "review": "-"
     }
@@ -71,7 +71,7 @@
 "fields":{
     "watched": "No",
     "title": "Top Gun: Maverick",
-    "rating": "-",
+    "rating": "--",
     "release_date": "May 27, 2022",
     "review": "-"
 }
@@ -93,7 +93,7 @@
 "fields":{
     "watched": "No",
     "title": "Morbius",
-    "rating": "-",
+    "rating": "--",
     "release_date": "March 30, 2022",
     "review": "-"
 }
