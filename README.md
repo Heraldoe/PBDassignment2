@@ -21,3 +21,7 @@ The reason we need data delivery is because most application today will have a d
 First, I initiated a new app called mywatchlist with "python manage.py startapp mywatchlist" and added "mywatchlist" in the INSTALLED_APPS. Next, I added the urlpattern for the application mywatchlist to the urls.py in the folder project_django. After that, I added the models for the data in the models.py file in the mywatchlist application folder so that the data will be represented properly. This is then followed by adding 10 data entries by creating a new folder called fixtures and creating a JSON file in the folder to hold the 10 data entries. The next step after this is to add new urlpatterns in the url.py file in the application folder so that the user can open the data in HTML, JSON or XML format. Since this repository is the same as the repository from the previous assignment, I didn't need to add my API key from Heroku to the repository to deploy it. However, if this was a new repository that have not been deployed to Heroku, then I would need to copy my application API key from Heroku to the repository. With that, the application should be up and running for everyone.
 
 ## Postman screenshots
+![html ss](https://user-images.githubusercontent.com/111977201/191517061-2acc4acd-9a29-4d5a-8f09-71f8e6b1ef64.png)<br>
+![json ss](https://user-images.githubusercontent.com/111977201/191517136-327b04fe-8a85-49ce-9d39-e35dd1b69698.png)<br>
+![xml ss](https://user-images.githubusercontent.com/111977201/191517236-543a09e9-0fbb-45de-9551-78e75c0f16de.png)
+
