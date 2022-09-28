@@ -1,27 +1,22 @@
-# Assignment 3
+# Assignment 4
 
-Hyperlink : https://catalogueeee.herokuapp.com/mywatchlist/html,<br>
-            https://catalogueeee.herokuapp.com/mywatchlist/xml,<br>
-            https://catalogueeee.herokuapp.com/mywatchlist/json<br>
+Hyperlink : https://catalogueeee.herokuapp.com/todolist <br>
 
 ## Essay questions
 
-## Explain the difference between JSON, XML, and HTML!
+## What does % csrf_token % do in the form element? What happens if there is no such "code snippet" in the form element?
 
-A JSON file, or JavaScript Oject Notation is a file format which uses strings to store and send data which contains an attribute-value pairs. It is used to keep data in such a way that it is human-readable. XML stands for Extensible Markup Language and is a markup language which defines a rule on how to encode data that is both human and machine readable. Lastly HTML stands for Hypertext Markup Language. It is the standard markup language when creating a web page. <br>
-One of the differences between JSON and XML is that just like its name, JSON is based on the JavaScript language while XML is derived from SGML which stands for the Standard Generalized Markup Language. XML is made to improve the readability as it adds extra information to plain text and also to store and show data. Unlike XML, JSON is said to be more readable as it looks more like a list instead of a nested outline like XML. It is also said that JSON is more lightweight than XML. <br>
-Finally, HTML is the most different when comparing the three. If JSON and XML is used to storing and sending data, HTML is used to define how to represent the existing data. HTML will represent the structure of a web page. Instead of storing any data, it just shows how a web page would look like and how it will be rendered on a browser, this would mean that a web page would need all three JSON, XML and HTML so that it can both store and represent data.
+CSRF stands for Cross-Site Request Forgery. These CSRF tokens prevents CSRF attacks by making it a requirement to have a "key" to send a request from the user. This CSRF token is then compared with the current session token. If the tokens do not match, then the request will not be accepted. If there is no CSRF token, CSRF attacks can easily happen when unauthorized users can forge a request and gain access from an authorized user's session. This can cause a lot of harm to the user data as these unauthorized users could forge a request a user's username or password which would then give the unauthorized users access to other users.
 
-## Explain why we need the data delivery when implementing on a platform!
+## Can we create the form element manually (without using a generator like {{ form.as_table }})? Explain generally how to create form manually.
 
-The reason we need data delivery is because most application today will have a database which stores their data which may be large. Only when the users requests for the data, then the application will fetch the data requested and not all of the data. With this, data delivery becomes a must-have for any application. In addition to that, by using the data delivery system, the application won't have to store data in itself which in general reduces the burden on the application if the data is too large to store.
+It is possible to create a form element manually without using the generator. Instead of using the generator, we would have to use the form tag and make it wrap around an input while also containing the designated URL. After that, we can simply close the form tag. Unlike when using a generator, we would have to manually add the URL and the input of the form element on our own.
 
- ## Explain how do you complete the tasks in this assignment!
+## Describe the data flow process from the submission made by the user through the HTML form, data storage in the database, until the appearance of the data that has been stored in the HTML template.
 
-First, I initiated a new app called mywatchlist with "python manage.py startapp mywatchlist" and added "mywatchlist" in the INSTALLED_APPS. Next, I added the urlpattern for the application mywatchlist to the urls.py in the folder project_django. After that, I added the models for the data in the models.py file in the mywatchlist application folder so that the data will be represented properly. This is then followed by adding 10 data entries by creating a new folder called fixtures and creating a JSON file in the folder to hold the 10 data entries. The next step after this is to add new urlpatterns in the url.py file in the application folder so that the user can open the data in HTML, JSON or XML format. Since this repository is the same as the repository from the previous assignment, I didn't need to add my API key from Heroku to the repository to deploy it. However, if this was a new repository that have not been deployed to Heroku, then I would need to copy my application API key from Heroku to the repository. With that, the application should be up and running for everyone.
+First, a request must be made from the user, for example when the user creates a new task with a new title and description, views.py will run the create_task function to create and store the new data in the database. After this, the process is then redirected back to the show_todolist function. At this moment, the new data that was recently created by the user should already be in the database and the render function would use the new data and gives a response containing the data in the html back to the user.
 
-## Postman screenshots
-![html ss](https://user-images.githubusercontent.com/111977201/191517061-2acc4acd-9a29-4d5a-8f09-71f8e6b1ef64.png)<br>
-![json ss](https://user-images.githubusercontent.com/111977201/191517136-327b04fe-8a85-49ce-9d39-e35dd1b69698.png)<br>
-![xml ss](https://user-images.githubusercontent.com/111977201/191517236-543a09e9-0fbb-45de-9551-78e75c0f16de.png)
+## Explain how you implement the checklist above.
 
+To complete the assignment, first I made a new app named "todolist" using "python manage.py startapp todolist". After this, I added the todolist app to the INSTALLED_APPS in the settings.py file in the project_django folder. Next would be handling the urls.py file so that the app could be accessed locally. Continuing, I created a new class in the models.py file named Task as instructed. The class Task has fields user, date, title and decription with their own respective fields also as instructed. The next step was to add the registration, login and logout forms which I did by creating new functions register, login_user and logout_user in the views.py file. The register and the login_user function would then have a html file in the template folder which would handle for when the user is registering and/or logging in. Each of the newly added functions would also be added to the urls.py file to handle for when each of them are needed or called. The next step would be to restrict the access of the application to unauthorized users. I did this by first importing "login_required" from django.contrib.auth.decorators and then adding the code "@login_required(login_url='/wishlist/login/')" before the "show_todolist" function. Finally, the last step would be to add Cookies so that the users who are already logged in won't have to log in again if they refresh the page. I did this by using the imported HttpResponseRedirect function and adding it to the login_user function. <br>
+After this was finished, I added a new button to add a new task into the database and also a new html file to handle this function which I also added to the file urls.py.
