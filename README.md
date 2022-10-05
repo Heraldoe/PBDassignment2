@@ -15,11 +15,11 @@ By using the external method, we can easily add the same rules to a number of fi
 
 "a" makes a hyperlink.
 "body" Defines the document's body.
-"br" Makes a one line break
-"button" Creates a clickable button
-"style" Specifies style using inline method
-"table" creates a table
-"div" Specifies a divide in the document
+"br" Makes a one line break.
+"button" Creates a clickable button.
+"style" Specifies style using inline method.
+"table" creates a table.
+"div" Specifies a divide in the document.
 
 
 ## Describe the types of CSS selectors you know.
