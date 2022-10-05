@@ -1,23 +1,53 @@
 {% extends 'base.html' %}
 {% block content %}
-<h5> {{username}} </h5>
+<style>
+  h1 {
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+  h2 {
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+  }
+  h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+  }
+  h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    margin-top: 35px;
+  }
+  #nounder {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+</style>
+<body style="background-color: darkcyan">
+<h1>You are logged in as : {{user}}</h1>
 
-<table>
-    <tr>
-        <th>Date</th>
-        <th>Title</th>
-        <th>Description</th>
-    </tr>
-    {% for task in todolist %}
-      <tr>
-          <td>{{task.date}}</td>
-          <td>{{task.title}}</td>
-          <td>{{task.description}}</td>
-          {% endfor %}
-      </tr>
-</table>
-<h5>Last Login: {{ last_login }}</h5>
-<button><a href="{% url 'todolist:create_task' %}">New Task</a></button>
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-
+<div class="row row-cols-1 row-cols-md-4 g-5">
+{% for task in todolist %}
+    <div class="col">
+        <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+            <h4>{{task.title}}</h4>
+            <div class="card-body">
+                <h2 class="card-text">{{task.description}}</h2>
+                <p class="card-text">Created : {{task.date}}</small></p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+<br>
+<button type="button" class="btn btn-secondary btn-lg"><a id = "nounder" href="{% url 'todolist:create_task' %}">New Task</a></button>
+<button type="button" class="btn btn-secondary btn-lg"><a id = "nounder" href="{% url 'todolist:logout' %}">Logout</a></button>
+<h3><small class="text-muted">Last Login: {{ last_login }}</small></h3>
+</body>
 {% endblock content %}

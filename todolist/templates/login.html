@@ -1,18 +1,47 @@
 {% extends 'base.html' %}
-
-{% block meta %}
-<title>Login</title>
-{% endblock meta %}
-
 {% block content %}
-
+<style>
+    h1 {
+      font-size: x-large;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 35px;
+      margin-top: 35px;
+    }
+    h2 {
+      font-size:xx-large;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: left;
+    }
+    h4 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+      margin-top: 30px;
+    }
+    h3 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: left;
+      margin-top: 35px;
+    }
+    #nounder {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    td{
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+  </style>
+<h2 style="text-align: left;">Login</h2>
+<body style="background-color: darkcyan"></body>
 <div class = "login">
 
-    <h1>Login</h1>
 
     <form method="POST" action="">
         {% csrf_token %}
-        <table>
+        <table style="align-items: center;">
             <tr>
                 <td>Username: </td>
                 <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
@@ -38,8 +67,8 @@
         </ul>
     {% endif %}
 
-    Don't have an account? <a href="{% url 'todolist:register' %}">Create Account</a>
+    Don't have an account? <a id = "nounder" href="{% url 'todolist:register' %}">Create Account</a>
 
 </div>
-
+</body>
 {% endblock content %}
