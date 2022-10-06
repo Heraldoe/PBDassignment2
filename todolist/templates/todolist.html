@@ -29,7 +29,7 @@
     text-decoration: none;
   }
 </style>
-<body style="background-color: darkcyan">
+<body style="background-image: url(https://i.pinimg.com/originals/ac/f6/94/acf6944e8300de6f05105448d3b8950b.jpg);">
 <h1>You are logged in as : {{user}}</h1>
 
 <div class="row row-cols-1 row-cols-md-4 g-5">
@@ -46,8 +46,8 @@
 {% endfor %}
 </div>
 <br>
-<button type="button" class="btn btn-secondary btn-lg"><a id = "nounder" href="{% url 'todolist:create_task' %}">New Task</a></button>
-<button type="button" class="btn btn-secondary btn-lg"><a id = "nounder" href="{% url 'todolist:logout' %}">Logout</a></button>
-<h3><small class="text-muted">Last Login: {{ last_login }}</small></h3>
+<button type="button" class="btn btn-outline-dark"><a id = "nounder" href="{% url 'todolist:create_task' %}">New Task</a></button>
+<button type="button" class="btn btn-outline-dark"><a id = "nounder" href="{% url 'todolist:logout' %}">Logout</a></button>
+<h3><small>Last Login: {{ last_login }}</small></h3>
 </body>
 {% endblock content %}

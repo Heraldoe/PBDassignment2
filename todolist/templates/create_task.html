@@ -13,7 +13,7 @@
     h2 {
       font-size:xx-large;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      text-align: left;
+      text-align: center;
     }
     h4 {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -30,25 +30,35 @@
       text-decoration: none;
     }
   </style>
-<body style="background-color: darkcyan"></body>
-<h2>Add New Task</h2>
-  <form method="post">
-      {% csrf_token %}
+<body style="background-image: url(https://i.pinimg.com/originals/ac/f6/94/acf6944e8300de6f05105448d3b8950b.jpg);"></body>
+<h1>Add New Task</h1>
+<form method="POST" action="">
+  {% csrf_token %}
+  <div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="card">
+
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            
+            <div class="form px-4 pt-5">
+
+              <tr>
+                <td>Title: </td>
+                <td><input type="text" name="title" placeholder="Fill todo" class="form-control"></td>
+            </tr>
+                    
+            <tr>
+                <td>Description: </td>
+                <td><input type="text" name="description" placeholder="fill description" class="form-control"></td>
+            </tr>
+            <tr>
+              <button type="submit">New Task</button>
+            </tr>
+
+            </div>
+          </div>
+
+</form>
   
-      <table>
-          <tr>
-              <td>Title: </td>
-              <td><input type="text" name="title" placeholder="Fill todo" class="form-control"></td>
-          </tr>
-                  
-          <tr>
-              <td>Description: </td>
-              <td><input type="text" name="description" placeholder="fill description" class="form-control"></td>
-          </tr>
-      </table>
-  
-      <br>
-      <button type="submit">New Task</button>
-  </form>
   
   {% endblock %}
