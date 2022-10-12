@@ -1,3 +1,4 @@
+from http.client import HTTPResponse
 from django.shortcuts import render
 from todolist.models import Task
 from django.shortcuts import redirect
@@ -9,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.http import HttpRequest
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -66,3 +68,10 @@ def create_task(request):
         )
         return HttpResponseRedirect(reverse("todolist:show_todolist"))
     return render(request, "create_task.html")
+
+def show_todolist_ajax(request: HttpRequest) -> HTTPResponse:
+    todolistdata = ""
+    moredata = { 'todolist' : todolistdata,
+                'username' : request.user
+    }
+    return render(request, "todolist_ajax.html", moredata)
