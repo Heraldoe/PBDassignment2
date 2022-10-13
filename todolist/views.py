@@ -11,6 +11,8 @@ import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.http import HttpRequest
+from django.http import HttpResponse
+from django.core import serializers
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -75,3 +77,7 @@ def show_todolist_ajax(request: HttpRequest) -> HTTPResponse:
                 'username' : request.user
     }
     return render(request, "todolist_ajax.html", moredata)
+
+def show_json(request): 
+    data = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")

@@ -29,17 +29,11 @@
     text-decoration: none;
   }
 </style>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
   function card(task) {
     return `
-    <div class="col">
-      <body style="background-image: url(https://i.pinimg.com/originals/ac/f6/94/acf6944e8300de6f05105448d3b8950b.jpg);">
-      <h1>You are logged in as : ${user}</h1>
-
-    <div class="row row-cols-1 row-cols-md-4 g-5">
-      {% for task in todolist %}
     <div class="col">
         <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
             <h4>${task.fields.title}</h4>
@@ -49,17 +43,29 @@ $(document).ready(function() {
             </div>
         </div>
     </div>
-{% endfor %}
+`
+};
+function loop() {
+        $.get("{% url 'todolist:show_json' %}", function(data) {
+            $.each(data, function(i, value) {
+                $("#uuu").append(card(value));
+            });
+        });
+    };
+loop();
+})
+
+</script>
+<div class="col">
+  <body style="background-image: url(https://i.pinimg.com/originals/ac/f6/94/acf6944e8300de6f05105448d3b8950b.jpg);">
+<div class="row row-cols-1 row-cols-md-4 g-5" id="uuu">
+
 </div>
 <br>
 <button type="button" class="btn btn-outline-dark"><a id = "nounder" href="{% url 'todolist:create_task' %}">New Task</a></button>
 <button type="button" class="btn btn-outline-dark"><a id = "nounder" href="{% url 'todolist:logout' %}">Logout</a></button>
 
-</body>
-`      
-  }
-})
+</body>   
 
-</script>
 
 {% endblock content %}
