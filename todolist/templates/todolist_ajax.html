@@ -29,17 +29,23 @@
     text-decoration: none;
   }
 </style>
-<body style="background-image: url(https://i.pinimg.com/originals/ac/f6/94/acf6944e8300de6f05105448d3b8950b.jpg);">
-<h1>You are logged in as : {{user}}</h1>
 
-<div class="row row-cols-1 row-cols-md-4 g-5">
-{% for task in todolist %}
+<script>
+$(document).ready(function() {
+  function card(task) {
+    return `
+    <div class="col">
+      <body style="background-image: url(https://i.pinimg.com/originals/ac/f6/94/acf6944e8300de6f05105448d3b8950b.jpg);">
+      <h1>You are logged in as : ${user}</h1>
+
+    <div class="row row-cols-1 row-cols-md-4 g-5">
+      {% for task in todolist %}
     <div class="col">
         <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
-            <h4>{{task.title}}</h4>
+            <h4>${task.fields.title}</h4>
             <div class="card-body">
-                <h2 class="card-text">{{task.description}}</h2>
-                <p class="card-text">Created : {{task.date}}</small></p>
+                <h2 class="card-text">${task.fields.description}</h2>
+                <p class="card-text">Created : ${task.fields.date}</small></p>
             </div>
         </div>
     </div>
@@ -48,7 +54,12 @@
 <br>
 <button type="button" class="btn btn-outline-dark"><a id = "nounder" href="{% url 'todolist:create_task' %}">New Task</a></button>
 <button type="button" class="btn btn-outline-dark"><a id = "nounder" href="{% url 'todolist:logout' %}">Logout</a></button>
-<h3><small>Last Login: {{ last_login }}</small></h3>
+
 </body>
+`      
+  }
+})
+
+</script>
 
 {% endblock content %}
